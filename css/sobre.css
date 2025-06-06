@@ -1,0 +1,205 @@
+/* === PIXELHUB - ESTILOS VIVOS E ANIMADOS PARA PÁGINA SOBRE === */
+
+/* --- 1. HERO DA PÁGINA --- */
+.page-hero.sobre-hero {
+    padding: 120px 0;
+    text-align: center;
+    color: var(--cor-texto-claro);
+    background: linear-gradient(rgba(10, 62, 224, 0.85), rgba(0, 34, 154, 0.9)), 
+                url('../img/sobre-hero-bg.jpg') no-repeat center center;
+    background-size: cover;
+    position: relative;
+}
+[data-theme="dark"] .page-hero.sobre-hero {
+    background: linear-gradient(rgba(13, 17, 23, 0.85), rgba(13, 17, 23, 0.95)), 
+                url('../img/sobre-hero-bg.jpg') no-repeat center center;
+    background-size: cover;
+}
+.page-hero h1 {
+    color: var(--cor-texto-claro);
+    font-size: clamp(2.5rem, 8vw, 4rem);
+    text-shadow: 0 2px 10px rgba(0,0,0,0.3);
+}
+.page-hero p {
+    color: rgba(255, 255, 255, 0.85);
+    max-width: 600px;
+    margin: 15px auto 0;
+    font-size: 1.1rem;
+}
+
+/* --- 2. LAYOUT HISTÓRIA E PILARES --- */
+.story-pillars-layout {
+    display: grid;
+    grid-template-columns: 2fr 1.2fr;
+    gap: 60px;
+    align-items: start;
+}
+.story-content p {
+    color: var(--cor-texto-secundario);
+    margin-bottom: 1.5rem;
+    line-height: 1.8;
+}
+.pillars-content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.pillar-card {
+    background-color: var(--cor-fundo-card-e-footer);
+    border: 1px solid var(--cor-borda-sutil);
+    border-radius: var(--raio-borda);
+    padding: 25px;
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    transition: var(--transicao-suave);
+    opacity: 0;
+}
+.pillar-card.visible { opacity: 1; }
+.pillar-card:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: var(--sombra-card-hover);
+    border-color: var(--cor-azul-primario);
+}
+.pillar-card__icon {
+    font-size: 1.8rem;
+    color: var(--cor-turquesa);
+    margin-top: 5px;
+    background: var(--gradiente-turquesa);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.pillar-card__title { font-size: 1.2rem; margin-bottom: 5px; color: var(--cor-texto-principal); }
+.pillar-card__text { font-size: 0.9rem; color: var(--cor-texto-secundario); line-height: 1.6; }
+
+/* --- 3. SEÇÃO DA EQUIPE COM EFEITO CARD FLIP 3D --- */
+.team-section { background-color: var(--cor-fundo-geral); }
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 30px;
+}
+.team-member-card {
+    background-color: transparent;
+    aspect-ratio: 3 / 4;
+    perspective: 1000px; /* Efeito de profundidade 3D */
+    opacity: 0; /* Para animação escalonada */
+}
+.team-member-card.visible { opacity: 1; }
+.team-member-card__inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+.team-member-card:hover .team-member-card__inner {
+    transform: rotateY(180deg);
+}
+.team-member-card__front, .team-member-card__back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden; /* Safari */
+    backface-visibility: hidden;
+    border-radius: var(--raio-borda);
+    overflow: hidden;
+    box-shadow: var(--sombra-card);
+}
+.team-member-card__front {
+    background-color: var(--cor-fundo-card-e-footer);
+}
+.team-member-card__front img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top;
+}
+.team-member-card__info {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(to top, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0) 100%);
+    padding: 30px 20px 15px 20px;
+    color: #fff;
+    text-align: left;
+}
+.team-member-card__info h3 { font-size: 1.2rem; font-weight: 600; margin: 0; }
+.team-member-card__info p { font-size: 0.9rem; color: var(--cor-turquesa); margin: 0; }
+.team-member-card__back {
+    background: var(--gradiente-primario);
+    color: white;
+    transform: rotateY(180deg);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    text-align: center;
+}
+.team-member-card__back h4 { font-size: 1.3rem; margin-bottom: 10px; }
+.team-member-card__back p { font-size: 0.9rem; line-height: 1.5; margin-bottom: 20px; color: rgba(255,255,255,0.8); }
+.team-socials a {
+    color: white;
+    font-size: 1.2rem;
+    margin: 0 10px;
+    transition: transform 0.3s ease;
+}
+.team-socials a:hover { transform: scale(1.2); }
+
+
+/* --- 4. SEÇÃO DE LOCALIZAÇÃO --- */
+.location-layout {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: 50px;
+    align-items: center;
+}
+.location-details h3 { font-size: 1.8rem; font-family: var(--fonte-destaque); color: var(--cor-texto-principal); margin-bottom: 15px; }
+.location-details p { color: var(--cor-texto-secundario); margin-bottom: 25px; }
+.address { display: flex; align-items: flex-start; gap: 15px; margin-bottom: 30px; }
+.address i { font-size: 1.5rem; color: var(--cor-turquesa); margin-top: 5px; }
+.address span { line-height: 1.7; color: var(--cor-texto-secundario); }
+.location-map {
+    border-radius: var(--raio-borda);
+    overflow: hidden;
+    height: 400px;
+    box-shadow: var(--sombra-card);
+}
+.location-map iframe {
+    width: 100%; height: 100%; border: none;
+    filter: var(--cor-fundo-geral) === '#FFFFFF' ? 'grayscale(0.8)' : 'invert(1) hue-rotate(180deg)';
+    transition: filter 0.4s ease;
+}
+.location-map:hover iframe {
+    filter: grayscale(0);
+}
+
+/* --- 5. RESPONSIVIDADE --- */
+@media (max-width: 991px) {
+    .story-pillars-layout, .location-layout {
+        grid-template-columns: 1fr;
+    }
+    .location-map { height: 350px; }
+}
+
+@media (max-width: 767px) {
+    /* Matriz 3x3 para os pilares em mobile */
+    .pillars-content {
+        grid-template-columns: repeat(3, 1fr);
+        display: grid;
+        gap: 15px;
+    }
+    .pillar-card {
+        flex-direction: column;
+        text-align: center;
+        padding: 20px;
+        align-items: center;
+    }
+    .pillar-card__icon { margin-top: 0; margin-bottom: 10px; }
+    .pillar-card__title { font-size: 0.9rem; }
+    .pillar-card__text { font-size: 0.8rem; }
+    
+    .team-grid { grid-template-columns: repeat(2, 1fr); }
+}

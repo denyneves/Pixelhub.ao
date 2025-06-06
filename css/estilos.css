@@ -1,0 +1,365 @@
+/* === PIXELHUB - ESTILOS VIVOS E ANIMADOS V11 (MAIS DESTAQUE) === */
+
+/* --- 1. CONFIGURAÇÕES GLOBAIS E VARIÁVEIS --- */
+:root {
+    --cor-azul-primario: #0A3EE0;
+    --cor-azul-secundario: #00229A;
+    --cor-turquesa: #28CEC2;
+    --gradiente-primario: linear-gradient(45deg, var(--cor-azul-secundario), var(--cor-azul-primario));
+    --gradiente-turquesa: linear-gradient(45deg, #28cec2, #39e7db);
+    --cor-texto-claro: #FFFFFF;
+    --cor-fundo-geral: #F8F9FC;
+    --cor-fundo-card-e-footer: #FFFFFF;
+    --cor-texto-principal: #1D2B4F;
+    --cor-texto-secundario: #5A6481;
+    --cor-borda-sutil: #e9edf2;
+    --sombra-card: 0 4px 15px rgba(29, 43, 79, 0.07);
+    --sombra-card-hover: 0 12px 30px rgba(29, 43, 79, 0.12);
+    --sombra-glow-azul: 0 0 25px rgba(10, 62, 224, 0.5);
+    --sombra-glow-turquesa: 0 0 25px rgba(40, 206, 194, 0.6);
+    --fonte-principal: 'Poppins', sans-serif;
+    --fonte-destaque: 'Montserrat', sans-serif;
+    --largura-container: 1140px;
+    --padding-secao-vertical: 80px;
+    --raio-borda: 15px;
+    --transicao-suave: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+[data-theme="dark"] {
+    --cor-fundo-geral: #0D1117;
+    --cor-fundo-card-e-footer: #161B22;
+    --cor-texto-principal: #E0E0E0;
+    --cor-texto-secundario: #A0AEC0;
+    --cor-borda-sutil: #30363D;
+    --sombra-card: 0 4px 15px rgba(0, 0, 0, 0.2);
+    --sombra-card-hover: 0 12px 35px rgba(0, 0, 0, 0.3);
+}
+
+/* --- 2. ANIMAÇÕES GLOBAIS E TRANSIÇÕES DE PÁGINA --- */
+html, body {
+    overflow-x: hidden;
+}
+body {
+    font-family: var(--fonte-principal);
+    background-color: var(--cor-fundo-geral);
+    color: var(--cor-texto-principal);
+    -webkit-font-smoothing: antialiased;
+    transition: background-color 0.4s ease, color 0.4s ease;
+}
+.page-transition {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: var(--cor-azul-primario);
+    z-index: 9999;
+    transform: translateY(-100%);
+    transition: transform 0.6s cubic-bezier(0.86, 0, 0.07, 1);
+}
+.page-transition.is-active {
+    transform: translateY(0);
+}
+
+/* Animação de entrada para elementos */
+.animate-on-scroll {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.8s cubic-bezier(0.165, 0.84, 0.44, 1), transform 0.8s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+.animate-on-scroll.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+.animate-on-load {
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeInUp 0.8s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+    animation-delay: var(--delay, 0s);
+}
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* --- 3. ESTILOS BASE E UTILITÁRIOS --- */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+.pixelhub-container { width: 100%; max-width: var(--largura-container); margin: 0 auto; padding: 0 20px; }
+.pixelhub-section { padding: var(--padding-secao-vertical) 0; }
+.pixelhub-section__title { font-family: var(--fonte-destaque); font-size: clamp(1.8rem, 5vw, 2.5rem); font-weight: 700; margin-bottom: 50px; color: var(--cor-texto-principal); text-align: left; }
+
+/* --- 4. HEADER E NAVBAR (COM GLASSMORPHISM) --- */
+.pixelhub-header {
+    background: var(--gradiente-primario);
+    padding: 15px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+.pixelhub-header .pixelhub-container, .pixelhub-header__actions { display: flex; justify-content: space-between; align-items: center; }
+.pixelhub-header__logo { font-family: var(--fonte-destaque); font-size: 1.8rem; font-weight: 700; color: var(--cor-texto-claro); text-decoration: none; }
+.pixelhub-header__nav { display: none; }
+.pixelhub-header__nav ul {
+    position: relative; list-style: none; display: flex; gap: 10px; align-items: center;
+    padding: 6px;
+    background-color: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 50px; margin: 0;
+}
+.pixelhub-header__nav a {
+    color: var(--cor-texto-claro); text-decoration: none; font-weight: 500;
+    padding: 8px 20px; border-radius: 50px; position: relative;
+    transition: all 0.4s ease;
+}
+.pixelhub-header__nav a:hover {
+    color: var(--cor-azul-primario);
+    background-color: rgba(255, 255, 255, 0.9);
+}
+.pixelhub-header__nav a.active {
+    background-color: var(--cor-texto-claro); color: var(--cor-azul-primario);
+    font-weight: 600; box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+.pixelhub-header__menu-toggle { background: none; border: none; color: var(--cor-texto-claro); font-size: 1.5rem; cursor: pointer; z-index: 1001; transition: transform 0.3s ease; }
+.pixelhub-btn { display: inline-block; padding: 12px 28px; border-radius: 50px; text-decoration: none; font-weight: 600; font-size: 0.9rem; transition: var(--transicao-suave); border: none; cursor: pointer; }
+.pixelhub-btn--quote, .pixelhub-btn--primary { background: var(--gradiente-turquesa); color: var(--cor-azul-primario); font-weight: 700; }
+.pixelhub-btn--quote:hover, .pixelhub-btn--primary:hover {
+    transform: translateY(-5px) scale(1.05);
+    box-shadow: var(--sombra-glow-turquesa);
+}
+
+/* --- 5. SEÇÃO HERO --- */
+.pixelhub-hero { position: relative; padding: 60px 0 100px; text-align: left; overflow: hidden; }
+.hero-background-slider { position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 1; }
+.hero-background-slider__slide { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-size: cover; background-position: center; opacity: 0; transform: scale(1.1); transition: opacity 1.5s ease-in-out, transform 10s ease-in-out; }
+.hero-background-slider__slide.active { opacity: 1; transform: scale(1); animation: kenBurns 12s infinite alternate; }
+.hero-overlay { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(10, 62, 224, 0.8); z-index: 2; }
+.pixelhub-hero__container { position: relative; z-index: 3; }
+.pixelhub-hero__title { font-family: var(--fonte-destaque); font-size: clamp(2.5rem, 8vw, 3.8rem); font-weight: 700; line-height: 1.2; max-width: 700px; margin-bottom: 20px; color: var(--cor-texto-claro); text-shadow: 0 2px 10px rgba(0,0,0,0.3); }
+.pixelhub-hero__subtitle { font-size: 1.1rem; max-width: 600px; color: rgba(255,255,255,0.9); margin-bottom: 30px; }
+.pixelhub-btn--secondary { background-color: transparent; color: var(--cor-texto-claro); border: 2px solid rgba(255,255,255,0.5); }
+.pixelhub-btn--secondary:hover { background-color: var(--cor-texto-claro); color: var(--cor-azul-primario); border-color: var(--cor-texto-claro); }
+@keyframes kenBurns { 0% { transform: scale(1) translateX(0); } 100% { transform: scale(1.05) translateX(-15px); } }
+
+/* --- 6. CARDS GERAIS (QUEM SOMOS, SERVIÇOS) --- */
+.pixelhub-card-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 25px; }
+.pixelhub-card {
+    background-color: var(--cor-fundo-card-e-footer);
+    padding: 35px; border-radius: var(--raio-borda); text-align: left;
+    border: 1px solid var(--cor-borda-sutil); box-shadow: var(--sombra-card);
+    transition: var(--transicao-suave);
+    opacity: 0; /* Para animação escalonada */
+}
+.pixelhub-card.visible {
+    opacity: 1;
+}
+.pixelhub-card:hover {
+    transform: translateY(-12px);
+    box-shadow: var(--sombra-card-hover);
+    border-color: var(--cor-azul-primario);
+}
+[data-theme="dark"] .pixelhub-card:hover { border-color: var(--cor-turquesa); }
+.pixelhub-card__icon {
+    font-size: 2.5rem; margin-bottom: 20px; display: inline-block;
+    background: var(--gradiente-turquesa);
+    -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+.pixelhub-card:hover .pixelhub-card__icon { transform: scale(1.25) rotate(-15deg); }
+.pixelhub-card__title { font-size: 1.3rem; font-weight: 600; color: var(--cor-texto-principal); margin-bottom: 10px; }
+.pixelhub-card__text { font-size: 0.95rem; color: var(--cor-texto-secundario); margin-bottom: 20px; line-height: 1.7; }
+.pixelhub-card__more-info-btn { font-size: 0.9rem; color: var(--cor-azul-primario); font-weight: 600; text-decoration: none; transition: color 0.3s ease; }
+.pixelhub-card__more-info-btn i { margin-left: 5px; transition: transform 0.3s ease; }
+.pixelhub-card__more-info-btn:hover i { transform: translateX(5px); }
+[data-theme="dark"] .pixelhub-card__more-info-btn { color: var(--cor-turquesa); }
+
+/* --- 7. SEÇÃO "POR QUE ESCOLHER" --- */
+.choice-grid-2x2 { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; }
+.choice-card {
+    background-color: var(--cor-fundo-card-e-footer); border: 1px solid var(--cor-borda-sutil);
+    border-radius: var(--raio-borda); padding: 40px; text-align: center;
+    transition: var(--transicao-suave); opacity: 0; /* Para animação escalonada */
+}
+.choice-card.visible { opacity: 1; }
+.choice-card:hover { transform: translateY(-12px); box-shadow: var(--sombra-card-hover); border-color: var(--cor-azul-primario); }
+.choice-card__icon-wrapper {
+    width: 70px; height: 70px; margin: 0 auto 25px; border-radius: 50%;
+    background: var(--gradiente-primario);
+    display: flex; align-items: center; justify-content: center;
+    transition: var(--transicao-suave);
+}
+.choice-card:hover .choice-card__icon-wrapper { transform: scale(1.2) rotate(20deg); box-shadow: var(--sombra-glow-azul); }
+[data-theme="dark"] .choice-card:hover .choice-card__icon-wrapper { background: var(--gradiente-turquesa); box-shadow: var(--sombra-glow-turquesa); }
+.choice-card__icon { font-size: 2rem; color: var(--cor-texto-claro); }
+.choice-card__title { font-size: 1.3rem; font-weight: 600; color: var(--cor-texto-principal); margin-bottom: 15px; }
+.choice-card__text { font-size: 0.95rem; line-height: 1.7; color: var(--cor-texto-secundario); }
+
+/* --- 8. CARROSSEL DE CLIENTES --- */
+.pixelhub-section--primary-bg { background: var(--gradiente-primario); color: var(--cor-texto-claro); }
+#clientCarousel .carousel-inner { padding: 10px; }
+.client-testimonial-slide { display: grid; grid-template-columns: 1fr; align-items: center; gap: 30px; text-align: center; }
+.client-testimonial-slide img { width: 100%; max-width: 350px; height: auto; border-radius: var(--raio-borda); aspect-ratio: 16 / 10; object-fit: cover; margin: 0 auto; box-shadow: 0 10px 20px rgba(0,0,0,0.2); }
+.client-testimonial-content { max-width: 600px; margin: 0 auto; }
+.client-testimonial-content h4 { font-family: var(--fonte-destaque); font-size: 1.5rem; margin-bottom: 15px; }
+.client-testimonial-content p { font-size: 1rem; line-height: 1.7; color: rgba(255, 255, 255, 0.9); margin-bottom: 25px; font-style: italic; }
+.pixelhub-section__title--light { color: var(--cor-texto-claro); text-align: center; }
+
+/* --- 9. RODAPÉ --- */
+.pixelhub-footer { background-color: var(--cor-fundo-card-e-footer); padding: 60px 0 0; border-top: 1px solid var(--cor-borda-sutil); transition: all 0.3s ease; }
+[data-theme="dark"] .pixelhub-footer { background-color: #010409; }
+.pixelhub-footer-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 40px; padding-bottom: 40px; }
+.pixelhub-footer__logo { font-family: var(--fonte-destaque); font-size: 1.8rem; font-weight: 700; text-decoration: none; display: inline-block; margin-bottom: 15px; background: var(--gradiente-primario); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+[data-theme="dark"] .pixelhub-footer__logo { background: var(--gradiente-turquesa); -webkit-background-clip: text; }
+.pixelhub-footer-col h4 { font-size: 1.1rem; font-weight: 600; margin-bottom: 20px; color: var(--cor-texto-principal); }
+.pixelhub-footer-col ul { list-style: none; padding: 0; }
+.pixelhub-footer-col li:not(:last-child){ margin-bottom: 10px; }
+.pixelhub-footer-col a { color: var(--cor-texto-secundario); text-decoration: none; font-size: 0.9rem; transition: color 0.3s ease, padding-left 0.3s ease; }
+.pixelhub-footer-col a:hover { color: var(--cor-azul-primario); padding-left: 5px; }
+[data-theme="dark"] .pixelhub-footer-col a:hover { color: var(--cor-turquesa); }
+.pixelhub-footer-socials { display: flex; gap: 15px; }
+.pixelhub-footer-socials a { width: 40px; height: 40px; display: flex; justify-content: center; align-items: center; background-color: transparent; border: 1px solid var(--cor-borda-sutil); border-radius: 50%; color: var(--cor-texto-secundario); font-size: 1rem; transition: all 0.3s ease; }
+.pixelhub-footer-socials a:hover { background-color: var(--cor-azul-primario); color: var(--cor-texto-claro); border-color: var(--cor-azul-primario); transform: translateY(-3px) scale(1.1); }
+[data-theme="dark"] .pixelhub-footer-socials a:hover { background-color: var(--cor-turquesa); border-color: var(--cor-turquesa); }
+.pixelhub-footer-bottom { border-top: 1px solid var(--cor-borda-sutil); padding: 20px 0; text-align: center; font-size: 0.85rem; color: var(--cor-texto-secundario); }
+
+/* --- 10. BOTÕES FLUTUANTES (FAB) --- */
+.floating-action-buttons { position: fixed; bottom: 20px; right: 20px; z-index: 997; display: flex; flex-direction: column; gap: 10px; opacity: 0; transform: translateY(20px); visibility: hidden; transition: all 0.3s ease; }
+.floating-action-buttons.ativo { opacity: 1; transform: translateY(0); visibility: visible; }
+.fab-button { width: 50px; height: 50px; border-radius: 50%; background-color: var(--cor-texto-principal); color: var(--cor-fundo-geral); border: none; cursor: pointer; display: flex; align-items: center; justify-content: center; font-size: 1.2rem; box-shadow: 0 4px 12px rgba(0,0,0,0.2); transition: all 0.3s ease; }
+.fab-button:hover { transform: scale(1.1) rotate(15deg); background-color: var(--cor-azul-primario); }
+[data-theme="dark"] .fab-button:hover { background-color: var(--cor-turquesa); }
+#theme-switcher .fa-sun { display: none; }
+[data-theme="dark"] #theme-switcher .fa-sun { display: inline-block; }
+[data-theme="dark"] #theme-switcher .fa-moon { display: none; }
+
+/* --- 11. RESPONSIVIDADE --- */
+@media (min-width: 768px) {
+    .client-testimonial-slide { grid-template-columns: 1fr 1.5fr; gap: 50px; text-align: left; }
+    .client-testimonial-slide img { margin: 0; }
+}
+@media (max-width: 991px) {
+    .pixelhub-header__nav { position: fixed; top: 0; right: -100%; width: 100%; height: 100vh; background-color: var(--cor-azul-primario); z-index: 999; display: flex; justify-content: center; align-items: center; transition: right 0.5s cubic-bezier(0.645, 0.045, 0.355, 1); }
+    .pixelhub-header__nav.ativo { right: 0; }
+    .pixelhub-header__nav ul { background-color: transparent; backdrop-filter: none; border: none; flex-direction: column; gap: 10px; padding: 0; align-items: center; }
+    .pixelhub-header__nav li { opacity: 0; transform: translateY(20px); transition: opacity 0.4s ease, transform 0.4s ease; list-style: none; }
+    .pixelhub-header__nav.ativo li { opacity: 1; transform: translateY(0); }
+    .pixelhub-header__nav.ativo li:nth-child(1) { transition-delay: 0.2s; }
+    .pixelhub-header__nav.ativo li:nth-child(2) { transition-delay: 0.3s; }
+    .pixelhub-header__nav.ativo li:nth-child(3) { transition-delay: 0.4s; }
+    .pixelhub-header__nav.ativo li:nth-child(4) { transition-delay: 0.5s; }
+    .pixelhub-header__nav a { color: var(--cor-texto-claro); font-size: clamp(1.5rem, 8vw, 2rem); font-weight: 600; padding: 10px 20px; text-decoration: none; }
+    .pixelhub-header__nav a:hover, .pixelhub-header__nav a.active { color: var(--cor-turquesa); background: transparent; box-shadow: none; }
+    .pixelhub-header__actions .pixelhub-btn--quote { display: none; }
+}
+@media (min-width: 992px) {
+    .pixelhub-header__nav { display: flex; }
+    .pixelhub-header__menu-toggle { display: none; }
+}
+/* === MEDIA QUERY PARA O LAYOUT 3x3 EM MOBILE === */
+@media (max-width: 767px) {
+    .pixelhub-section { padding: 60px 0; }
+    
+    /* Layout de matriz 3x3 para os cards gerais */
+    .pixelhub-card-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 15px;
+    }
+    .pixelhub-card {
+        padding: 20px 10px;
+        text-align: center;
+    }
+    .pixelhub-card__icon {
+        font-size: 2rem;
+        margin-bottom: 10px;
+    }
+    .pixelhub-card__title {
+        font-size: 0.8rem;
+        line-height: 1.3;
+        min-height: 2.6em; /* Garante alinhamento se o título quebrar em duas linhas */
+    }
+    .pixelhub-card__text {
+        font-size: 0.75rem;
+        line-height: 1.4;
+        display: -webkit-box;
+        -webkit-line-clamp: 3; /* Limita o texto a 3 linhas */
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        margin-bottom: 15px;
+    }
+    .pixelhub-card__more-info-btn {
+        font-size: 0.7rem;
+        padding: 6px 12px;
+        background-color: var(--cor-turquesa);
+        color: var(--cor-azul-primario);
+        border-radius: 20px;
+    }
+    .pixelhub-card__more-info-btn i { display: none; }
+
+    /* Layout 2x2 para os cards da seção "Por que escolher" */
+    .choice-grid-2x2 {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+    }
+    .choice-card {
+        padding: 20px;
+    }
+    .choice-card__icon-wrapper {
+        width: 50px;
+        height: 50px;
+        margin-bottom: 15px;
+    }
+    .choice-card__icon {
+        font-size: 1.5rem;
+    }
+    .choice-card__title {
+        font-size: 0.9rem;
+    }
+    .choice-card__text {
+        font-size: 0.8rem;
+    }
+}
+
+/* --- Estilo Base do Slide (Estado Inativo/Dissolvido) --- */
+.hero-background-slider__slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center center;
+    
+    /* Estado inicial: invisível e "dissolvido" */
+    opacity: 0;
+    transform: scale(1.1);
+    filter: blur(8px) contrast(250%);
+    
+    /* Transições suaves para todas as propriedades animadas */
+    transition: opacity 1.5s cubic-bezier(0.4, 0, 0.2, 1), 
+                filter 1.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* --- Estilo do Slide Visível (Estado Ativo/Nítido) --- */
+.hero-background-slider__slide.active {
+    /* Estado final: totalmente visível e nítido */
+    opacity: 1;
+    transform: scale(1);
+    filter: blur(0px) contrast(100%);
+    
+    /* Animação Ken Burns (movimento lento contínuo) */
+    animation: kenBurns 12s infinite alternate cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* --- A animação de movimento lento (Ken Burns) permanece a mesma --- */
+@keyframes kenBurns {
+    from {
+        transform: scale(1);
+    }
+    to {
+        transform: scale(1.05);
+    }
+}
