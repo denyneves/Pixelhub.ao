@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nossos Serviços de Desenvolvimento - PixelHub</title>
+
+    <!-- Google Fonts, Font Awesome, Bootstrap CSS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- CSS Global e da Página -->
+    <link rel="stylesheet" href="css/estilos.css">
+    <link rel="stylesheet" href="css/blog.css">
+    <link rel="stylesheet" href="css/servicos-detalhe.css">
+    
+     <link rel="icon" href="assets/img/choice-ia.jpg" type="image/jpg">
+</head>
+<body>
+    <!-- Efeito de Transição de Página -->
+    <div id="page-transition-effect" class="page-transition"></div>
+
+    <div class="pixelhub-site-wrapper">
+        
+        <!-- ======================= CABEÇALHO (Reutilizado) ======================= -->
+        <header class="pixelhub-header">
+            <div class="pixelhub-container">
+                <a href="index.html" class="pixelhub-header__logo">PIXELHUB</a>
+                <nav class="pixelhub-header__nav" id="main-nav">
+                    <ul>
+                        <li><a href="index.html">Início</a></li>
+                        <li><a href="servicos-detalhe.html">Serviços</a></li>
+                        <li><a href="projetos.html">Projetos</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="sobre.html">Sobre</a></li>
+                    </ul>
+                </nav>
+                <div class="pixelhub-header__actions">
+                    <a href="#cta-final" class="pixelhub-btn pixelhub-btn--quote">Pedir Orçamento</a>
+                    <button class="pixelhub-header__menu-toggle" id="menu-toggle" aria-label="Abrir menu" aria-expanded="false">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                </div>
+            </div>
+        </header>
+
+        <main>
+           <!-- ======================= SEÇÃO HERO (COM SLIDE DE FUNDO) ======================= -->
+            <section class="pixelhub-hero">
+                <div class="hero-background-slider">
+                    <div class="hero-background-slider__slide active" style="background-image: url('assets/img/hero-bg-1.jpg');"></div>
+                    <div class="hero-background-slider__slide" style="background-image: url('assets/img/hero-bg-1.jpg');"></div>
+                    <div class="hero-background-slider__slide" style="background-image: url('assets/img/hero-bg-1.jpg');"></div>
+                </div>
+                <div class="hero-overlay"></div>
+
+                <div class="pixelhub-container pixelhub-hero__container">
+                    <h1 class="pixelhub-hero__title animate-on-load">O FUTURO É DIGITAL, NÓS CRIAMOS ELE</h1>
+                    <p class="pixelhub-hero__subtitle animate-on-load" style="--delay: 0.2s;">Somos especialistas em criar resultados para o seu negócio.</p>
+                    <div class="pixelhub-hero__actions animate-on-load" style="--delay: 0.4s;">
+                        <a href="#contato" class="pixelhub-btn pixelhub-btn--primary">Comece Seu Projeto</a>
+                        <a href="#servicos" class="pixelhub-btn pixelhub-btn--secondary">Nossos Serviços</a>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- ======================= GRID DE SERVIÇOS INTERATIVOS ======================= -->
+            <section class="pixelhub-section" id="service-grid-section">
+                <div class="pixelhub-container">
+                    <h2 class="pixelhub-section__title animate-on-scroll" style="text-align:center; margin-bottom: 60px;">Explore Nossas Capacidades</h2>
+                    <div class="service-grid animate-on-scroll" data-stagger-container>
+                        
+                        <!-- SERVIÇOS DE TECNOLOGIA -->
+                        <div class="service-card" data-stagger-child data-service-id="app-dev">
+                            <div class="service-card__icon"><i class="fas fa-mobile-alt"></i></div>
+                            <h3 class="service-card__title">Desenvolvimento de Aplicativos</h3>
+                            <p class="service-card__desc">Criamos apps nativos (iOS/Android) e híbridos, focados em performance e experiência do usuário.</p>
+                        </div>
+                        <div class="service-card" data-stagger-child data-service-id="web-sys">
+                            <div class="service-card__icon"><i class="fas fa-sitemap"></i></div>
+                            <h3 class="service-card__title">Sistemas Web e SaaS</h3>
+                            <p class="service-card__desc">Desenvolvemos plataformas web complexas, dashboards e soluções SaaS escaláveis na nuvem.</p>
+                        </div>
+                        <div class="service-card" data-stagger-child data-service-id="ecommerce">
+                            <div class="service-card__icon"><i class="fas fa-shopping-cart"></i></div>
+                            <h3 class="service-card__title">Soluções E-commerce</h3>
+                            <p class="service-card__desc">Construímos lojas virtuais robustas e personalizadas para maximizar suas vendas online.</p>
+                        </div>
+                        
+                        <!-- SERVIÇOS DE DESIGN -->
+                        <div class="service-card" data-stagger-child data-service-id="ui-ux">
+                            <div class="service-card__icon"><i class="fas fa-drafting-compass"></i></div>
+                            <h3 class="service-card__title">Design UI/UX</h3>
+                            <p class="service-card__desc">Projetamos interfaces intuitivas e atraentes que cativam usuários e simplificam jornadas complexas.</p>
+                        </div>
+                        <div class="service-card" data-stagger-child data-service-id="branding">
+                            <div class="service-card__icon"><i class="fas fa-lightbulb"></i></div>
+                            <h3 class="service-card__title">Identidade Visual e Branding</h3>
+                            <p class="service-card__desc">Criamos a alma da sua marca, do logo à voz, garantindo uma presença forte e coesa no mercado.</p>
+                        </div>
+
+                        <!-- SERVIÇOS ESTRATÉGICOS -->
+                        <div class="service-card" data-stagger-child data-service-id="consulting">
+                            <div class="service-card__icon"><i class="fas fa-brain"></i></div>
+                            <h3 class="service-card__title">Consultoria e Estratégia</h3>
+                            <p class="service-card__desc">Mapeamos seu projeto, validamos sua ideia e traçamos o caminho para um produto de sucesso.</p>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+
+            <!-- ======================= SEÇÃO NOSSOS CLIENTES (CARROSSEL) ======================= -->
+            <section class="pixelhub-section pixelhub-section--primary-bg animate-on-scroll" id="clientes">
+              <div class="cta-background-shape"></div>
+                <div class="pixelhub-container animate-on-scroll">
+                    <h2 class="cta-title" style="text-align: center;">Pronto para Transformar sua Visão em Realidade?</h2>
+                    <p class="cta-subtitle">Nossa equipe está pronta para impulsionar seu projeto. Fale conosco ou gerencie seus projetos em andamento através do nosso app exclusivo.</p>
+                    <div class="cta-buttons-group">
+                        <a href="#" class="pixelhub-btn pixelhub-btn--primary">Agendar uma Reunião</a>
+                        <a href="projetos.html" class="pixelhub-btn pixelhub-btn--secondary">Ver Nossos Projetos</a>
+                    </div>
+                    <div class="app-download-section">
+                        <p class="app-download-title" style="text-align: center;">Baixe nosso App de Gestão</p>
+                        <div class="app-buttons">
+                            <a href="#" class="app-store-btn"><i class="fab fa-apple"></i><div><span>Baixar na</span>App Store</div></a>
+                            <a href="#" class="app-store-btn"><i class="fab fa-google-play"></i><div><span>Disponível na</span>Google Play</div></a>
+                        </div>
+                    </div>
+                </section>
+
+        </main>
+        
+        <!-- ======================= MODAL DE SERVIÇOS (COM GLASSMORPHISM) ======================= -->
+        <div id="service-modal" class="modal-overlay hidden">
+            <div class="modal-container">
+                <button id="modal-close-btn" class="modal-close" aria-label="Fechar"><i class="fas fa-times"></i></button>
+                <div class="modal-grid">
+                    <div class="modal-info">
+                        <div class="modal-header">
+                            <i id="modal-icon" class="fas"></i>
+                            <h2 id="modal-title"></h2>
+                        </div>
+                        <div id="modal-body">
+                            <!-- Conteúdo injetado pelo JavaScript -->
+                        </div>
+                        <div class="modal-footer">
+                            <a href="#cta-final" class="pixelhub-btn pixelhub-btn--primary">Quero um Orçamento para este Serviço</a>
+                        </div>
+                    </div>
+                    <div class="modal-image-panel">
+                        <img id="modal-image" src="" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ======================= RODAPÉ (Reutilizado) ======================= -->
+        <footer class="pixelhub-footer">
+            <div class="pixelhub-container">
+                <div class="pixelhub-footer-grid">
+                    <div class="pixelhub-footer-col">
+                        <a href="index.html" class="pixelhub-footer__logo">PIXELHUB</a>
+                        <p class="pixelhub-footer__tagline">Transformando ideias em aplicativos de sucesso. Inovação digital para o seu negócio prosperar.</p>
+                    </div>
+                    <div class="pixelhub-footer-col">
+                        <h4>Navegação</h4>
+                        <ul>
+                            <li><a href="sobre.html">Sobre Nós</a></li>
+                            <li><a href="servicos-detalhe.html">Serviços</a></li>
+                            <li><a href="projetos.html">Projetos</a></li>
+                            <li><a href="blog.html">Blog</a></li>
+                        </ul>
+                    </div>
+                    <div class="pixelhub-footer-col">
+                        <h4>Contato</h4>
+                        <ul>
+                            <li><a href="mailto:contato@pixelhub.com"><i class="fas fa-envelope"></i> contato@pixelhub.com</a></li>
+                            <li><a href="tel:+5511999998888"><i class="fas fa-phone"></i> +55 (11) 99999-8888</a></li>
+                        </ul>
+                    </div>
+                    <div class="pixelhub-footer-col">
+                        <h4>Siga-nos</h4>
+                        <div class="pixelhub-footer-socials">
+                    <a href="https://wa.me/5511999998888" target="_blank" aria-label="WhatsApp" class="social-icon whatsapp"><i class="fab fa-whatsapp"></i></a>
+                    <a href="#" target="_blank" aria-label="LinkedIn" class="social-icon linkedin"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#" target="_blank" aria-label="Instagram" class="social-icon instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" target="_blank" aria-label="Facebook" class="social-icon facebook"><i class="fab fa-facebook-f"></i></a>
+                       </div>
+                    </div>
+                </div>
+                <div class="pixelhub-footer-bottom">
+                    <p>© <span id="current-year"></span> PixelHub. Todos os direitos reservados.</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <!-- ======================= BOTÕES FLUTUANTES (Reutilizado) ======================= -->
+    <div class="floating-action-buttons" id="fab-container">
+        <button id="theme-switcher" class="fab-button" aria-label="Alternar Tema">
+            <i class="fas fa-moon"></i>
+            <i class="fas fa-sun"></i>
+        </button>
+        <button id="scroll-to-top" class="fab-button" aria-label="Voltar ao Topo">
+            <i class="fas fa-arrow-up"></i>
+        </button>
+    </div>
+    <!-- ======================= SCRIPTS ======================= -->
+    <script src="js/script.js"></script>
+    <script src="js/servicos.js"></script>
+</body>
+</html>

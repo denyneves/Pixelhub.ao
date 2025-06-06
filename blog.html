@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog - Insights sobre Tecnologia e Aplicativos - PixelHub</title>
+
+    <!-- Google Fonts, Font Awesome, Bootstrap CSS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- CSS Global e da Página -->
+    <link rel="stylesheet" href="css/estilos.css">
+    <link rel="stylesheet" href="css/blog.css">
+    
+     <link rel="icon" href="assets/img/choice-ia.jpg" type="image/jpg">
+</head>
+<body>
+    <!-- Efeito de Transição de Página -->
+    <div id="page-transition-effect" class="page-transition"></div>
+
+    <div class="pixelhub-site-wrapper">
+        
+        <!-- ======================= CABEÇALHO (Reutilizado) ======================= -->
+        <header class="pixelhub-header">
+            <div class="pixelhub-container">
+                <a href="index.html" class="pixelhub-header__logo">PIXELHUB</a>
+                <nav class="pixelhub-header__nav" id="main-nav">
+                    <ul>
+                        <li><a href="index.html">Início</a></li>
+                        <li><a href="servicos-detalhe.html">Serviços</a></li>
+                        <li><a href="projetos.html">Projetos</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="sobre.html">Sobre</a></li>
+                    </ul>
+                </nav>
+                <div class="pixelhub-header__actions">
+                    <a href="index.html#contato" class="pixelhub-btn pixelhub-btn--quote">Pedir Orçamento</a>
+                    <button class="pixelhub-header__menu-toggle" id="menu-toggle" aria-label="Abrir menu" aria-expanded="false">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                </div>
+            </div>
+        </header>
+
+        <main>
+            <!-- ======================= HERO DA PÁGINA DE BLOG ======================= -->
+            <section class="page-hero blog-hero">
+                <div class="pixelhub-container">
+                    <h1 class="animate-on-load">PixelHub Blog</h1>
+                    <p class="animate-on-load" style="--delay: 0.2s;">Nossos insights sobre desenvolvimento, design e estratégia para transformar sua ideia em um produto digital de sucesso.</p>
+                </div>
+            </section>
+
+            <!-- ======================= SEÇÃO DE POSTS DO BLOG ======================= -->
+            <section class="pixelhub-section" id="blog-posts">
+                <div class="pixelhub-container">
+                    <div class="blog-grid animate-on-scroll" data-stagger-container>
+                        
+                        <!-- CARD DE POST 1 -->
+                        <article class="blog-post-card" data-stagger-child>
+                            <a href="post-detalhe.html" class="blog-post-card__image-link">
+                                <img src="assets/img/choice-equipe.jpg" alt="Gráficos e análise de dados em um laptop" class="blog-post-card__image">
+                            </a>
+                            <div class="blog-post-card__content">
+                                <div class="blog-post-card__meta">
+                                    <span class="blog-post-card__category">Desenvolvimento</span>
+                                    <span><i class="fas fa-calendar-alt"></i> 15 de Ago, 2024</span>
+                                </div>
+                                <h3 class="blog-post-card__title"><a href="post-detalhe.html">5 Motivos para escolher Flutter para seu Próximo App</a></h3>
+                                <p class="blog-post-card__excerpt">Desenvolvimento rápido, performance nativa e uma base de código única. Entenda por que o framework da Google está conquistando o mundo mobile.</p>
+                                <a href="post-detalhe.html" class="pixelhub-card__more-info-btn">Ler artigo <i class="fas fa-arrow-right"></i></a>
+                            </div>
+                        </article>
+
+                        <!-- CARD DE POST 2 -->
+                        <article class="blog-post-card" data-stagger-child>
+                            <a href="post-detalhe.html" class="blog-post-card__image-link">
+                                <img src="assets/img/choice-equipe.jpg" alt="Equipe colaborando em um projeto de design" class="blog-post-card__image">
+                            </a>
+                            <div class="blog-post-card__content">
+                                <div class="blog-post-card__meta">
+                                    <span class="blog-post-card__category">Design UX/UI</span>
+                                    <span><i class="fas fa-calendar-alt"></i> 10 de Ago, 2024</span>
+                                </div>
+                                <h3 class="blog-post-card__title"><a href="post-detalhe.html">Design Atômico: Como Construir Interfaces Escaláveis</a></h3>
+                                <p class="blog-post-card__excerpt">Vá além dos componentes. Aprenda a metodologia que organiza a construção de interfaces de forma lógica, consistente e fácil de manter.</p>
+                                <a href="post-detalhe.html" class="pixelhub-card__more-info-btn">Ler artigo <i class="fas fa-arrow-right"></i></a>
+                            </div>
+                        </article>
+
+                        <!-- CARD DE POST 3 -->
+                        <article class="blog-post-card" data-stagger-child>
+                            <a href="post-detalhe.html" class="blog-post-card__image-link">
+                                 <img src="assets/img/choice-equipe.jpg" alt="Ícones de segurança e cadeados" class="blog-post-card__image">
+                            </a>
+                            <div class="blog-post-card__content">
+                                <div class="blog-post-card__meta">
+                                    <span class="blog-post-card__category">Estratégia</span>
+                                    <span><i class="fas fa-calendar-alt"></i> 05 de Ago, 2024</span>
+                                </div>
+                                <h3 class="blog-post-card__title"><a href="post-detalhe.html">MVP não é um Produto Ruim: Validando sua Ideia do Jeito Certo</a></h3>
+                                <p class="blog-post-card__excerpt">Entenda o verdadeiro propósito de um Produto Mínimo Viável e como usá-lo para economizar tempo, dinheiro e lançar um produto que o mercado realmente quer.</p>
+                                <a href="post-detalhe.html" class="pixelhub-card__more-info-btn">Ler artigo <i class="fas fa-arrow-right"></i></a>
+                            </div>
+                        </article>
+
+                        <!-- CARD DE POST 4 -->
+                        <article class="blog-post-card" data-stagger-child>
+                           <a href="post-detalhe.html" class="blog-post-card__image-link">
+                               <img src="assets/img/choice-equipe.jpg" alt="Pessoas em uma reunião de negócios" class="blog-post-card__image">
+                           </a>
+                            <div class="blog-post-card__content">
+                                <div class="blog-post-card__meta">
+                                    <span class="blog-post-card__category">Tecnologia</span>
+                                    <span><i class="fas fa-calendar-alt"></i> 01 de Ago, 2024</span>
+                                </div>
+                                <h3 class="blog-post-card__title"><a href="post-detalhe.html">APIs: A Espinha Dorsal dos Aplicativos Modernos</a></h3>
+                                <p class="blog-post-card__excerpt">Elas estão por toda parte, mas o que são e por que são tão cruciais? Desmistificamos o mundo das APIs e sua importância para qualquer projeto digital.</p>
+                                <a href="post-detalhe.html" class="pixelhub-card__more-info-btn">Ler artigo <i class="fas fa-arrow-right"></i></a>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ======================= SEÇÃO DE REDES SOCIAIS ======================= -->
+            <section class="pixelhub-section pixelhub-section--primary-bg" id="social-connect">
+                <div class="pixelhub-container text-center animate-on-scroll">
+                    <h2 class="pixelhub-section__title pixelhub-section__title--light">Conecte-se Conosco</h2>
+                    <p class="social-connect__text">Siga-nos nas redes sociais para mais dicas, notícias e os bastidores dos nossos projetos. Estamos sempre prontos para conversar!</p>
+                    <div class="social-connect__icons">
+                    <a href="https://wa.me/5511999998888" target="_blank" aria-label="WhatsApp" class="social-icon whatsapp"><i class="fab fa-whatsapp"></i></a>
+                    <a href="#" target="_blank" aria-label="LinkedIn" class="social-icon linkedin"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#" target="_blank" aria-label="Instagram" class="social-icon instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" target="_blank" aria-label="Facebook" class="social-icon facebook"><i class="fab fa-facebook-f"></i></a>
+                    </div>
+                </div>
+            </section>
+        </main>
+        
+        <!-- ======================= RODAPÉ (Reutilizado) ======================= -->
+        <footer class="pixelhub-footer">
+            <div class="pixelhub-container">
+                <div class="pixelhub-footer-grid">
+                    <div class="pixelhub-footer-col">
+                        <a href="index.html" class="pixelhub-footer__logo">PIXELHUB</a>
+                        <p class="pixelhub-footer__tagline">Transformando ideias em aplicativos de sucesso. Inovação digital para o seu negócio prosperar.</p>
+                    </div>
+                    <div class="pixelhub-footer-col">
+                        <h4>Navegação</h4>
+                        <ul>
+                            <li><a href="sobre.html">Sobre Nós</a></li>
+                            <li><a href="servicos-detalhe.html">Serviços</a></li>
+                            <li><a href="projetos.html">Projetos</a></li>
+                            <li><a href="blog.html">Blog</a></li>
+                        </ul>
+                    </div>
+                    <div class="pixelhub-footer-col">
+                        <h4>Contato</h4>
+                        <ul>
+                            <li><a href="mailto:contato@pixelhub.com"><i class="fas fa-envelope"></i> contato@pixelhub.com</a></li>
+                            <li><a href="tel:+5511999998888"><i class="fas fa-phone"></i> +55 (11) 99999-8888</a></li>
+                        </ul>
+                    </div>
+                    <div class="pixelhub-footer-col">
+                        <h4>Siga-nos</h4>
+                        <div class="pixelhub-footer-socials">
+                    <a href="https://wa.me/5511999998888" target="_blank" aria-label="WhatsApp" class="social-icon whatsapp"><i class="fab fa-whatsapp"></i></a>
+                    <a href="#" target="_blank" aria-label="LinkedIn" class="social-icon linkedin"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#" target="_blank" aria-label="Instagram" class="social-icon instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" target="_blank" aria-label="Facebook" class="social-icon facebook"><i class="fab fa-facebook-f"></i></a>
+                       </div>
+                    </div>
+                </div>
+                <div class="pixelhub-footer-bottom">
+                    <p>© <span id="current-year"></span> PixelHub. Todos os direitos reservados.</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <!-- ======================= BOTÕES FLUTUANTES (Reutilizado) ======================= -->
+    <div class="floating-action-buttons" id="fab-container">
+        <button id="theme-switcher" class="fab-button" aria-label="Alternar Tema">
+            <i class="fas fa-moon"></i>
+            <i class="fas fa-sun"></i>
+        </button>
+        <button id="scroll-to-top" class="fab-button" aria-label="Voltar ao Topo">
+            <i class="fas fa-arrow-up"></i>
+        </button>
+    </div>
+
+    <!-- ======================= SCRIPTS ======================= -->
+    <script src="js/script.js"></script>
+    <!-- Não é necessário um blog.js específico com esta abordagem -->
+</body>
+</html>

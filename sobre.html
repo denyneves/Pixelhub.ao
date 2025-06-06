@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sobre Nós - PixelHub</title>
+
+    <!-- Google Fonts, Font Awesome, Bootstrap CSS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+    <!-- CSS Global e da Página -->
+    <link rel="stylesheet" href="css/estilos.css">
+    <link rel="stylesheet" href="css/sobre.css">
+    
+     <link rel="icon" href="assets/img/choice-ia.jpg" type="image/jpg">
+</head>
+<body>
+    <!-- Efeito de Transição de Página -->
+    <div id="page-transition-effect" class="page-transition"></div>
+
+    <div class="pixelhub-site-wrapper">
+        
+        <!-- ======================= CABEÇALHO (Reutilizado) ======================= -->
+        <header class="pixelhub-header">
+            <div class="pixelhub-container">
+                <a href="index.html" class="pixelhub-header__logo">PIXELHUB</a>
+                <nav class="pixelhub-header__nav" id="main-nav">
+                    <ul>
+                        <li><a href="index.html">Início</a></li>
+                        <li><a href="servicos-detalhe.html">Serviços</a></li>
+                        <li><a href="projetos.html">Projetos</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="sobre.html">Sobre</a></li>
+                    </ul>
+                </nav>
+                <div class="pixelhub-header__actions">
+                    <a href="index.html#contato" class="pixelhub-btn pixelhub-btn--quote">Pedir Orçamento</a>
+                    <button class="pixelhub-header__menu-toggle" id="menu-toggle" aria-label="Abrir menu" aria-expanded="false">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                </div>
+            </div>
+        </header>
+
+        <main>
+            <!-- ======================= SEÇÃO HERO (COM SLIDE DE FUNDO) ======================= -->
+            <section class="pixelhub-hero">
+                <div class="hero-background-slider">
+                    <div class="hero-background-slider__slide active" style="background-image: url('assets/img/hero-bg-1.jpg');"></div>
+                    <div class="hero-background-slider__slide" style="background-image: url('assets/img/hero-bg-1.jpg');"></div>
+                    <div class="hero-background-slider__slide" style="background-image: url('assets/img/hero-bg-1.jpg');"></div>
+                </div>
+                <div class="hero-overlay"></div>
+
+                <div class="pixelhub-container pixelhub-hero__container">
+                    <h1 class="pixelhub-hero__title animate-on-load">O FUTURO É DIGITAL, NÓS CRIAMOS ELE</h1>
+                    <p class="pixelhub-hero__subtitle animate-on-load" style="--delay: 0.2s;">Somos especialistas em criar resultados para o seu negócio.</p>
+                    <div class="pixelhub-hero__actions animate-on-load" style="--delay: 0.4s;">
+                        <a href="#contato" class="pixelhub-btn pixelhub-btn--primary">Comece Seu Projeto</a>
+                        <a href="#servicos" class="pixelhub-btn pixelhub-btn--secondary">Nossos Serviços</a>
+                    </div>
+                </div>
+            </section>
+                
+            <!-- ======================= NOSSA HISTÓRIA E PILARES ======================= -->
+            <section class="pixelhub-section" id="nossa-historia">
+                <div class="pixelhub-container story-pillars-layout">
+                    <div class="story-content animate-on-scroll">
+                        <h2 class="pixelhub-section__title">Nossa Jornada</h2>
+                        <p>A PixelHub nasceu da paixão por tecnologia e da crença de que o código certo pode resolver problemas complexos e impactar vidas. Fundada em Luanda, nossa missão sempre foi clara: criar aplicativos que não apenas funcionem perfeitamente, mas que também encantem os usuários e impulsionem o crescimento dos nossos clientes.</p>
+                        <p>De um pequeno time de sonhadores a uma equipe consolidada de especialistas, cada linha de código, cada protótipo e cada lançamento nos fortaleceu. Hoje, olhamos para o futuro com a mesma energia do primeiro dia, prontos para construir a próxima grande ideia: a sua.</p>
+                    </div>
+                    <div class="pillars-content animate-on-scroll" data-stagger-container>
+                        <div class="pillar-card" data-stagger-child>
+                            <i class="fas fa-flag pillar-card__icon"></i>
+                            <div>
+                                <h3 class="pillar-card__title">Missão</h3>
+                                <p class="pillar-card__text">Empoderar negócios através de experiências memoráveis que geram resultados.</p>
+                            </div>
+                        </div>
+                        <div class="pillar-card" data-stagger-child>
+                            <i class="fas fa-eye pillar-card__icon"></i>
+                            <div>
+                                <h3 class="pillar-card__title">Visão</h3>
+                                <p class="pillar-card__text">Ser a agência de desenvolvimento de referência, reconhecida pela excelência técnico.</p>
+                            </div>
+                        </div>
+                        <div class="pillar-card" data-stagger-child>
+                            <i class="fas fa-gem pillar-card__icon"></i>
+                            <div>
+                                <h3 class="pillar-card__title">Valores</h3>
+                                <p class="pillar-card__text">Inovação, Colaboração, Qualidade e um Foco incansável no Sucesso do Cliente.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ======================= MURAL DA EQUIPE ======================= -->
+            <section class="pixelhub-section team-section" id="equipe">
+                <div class="pixelhub-container">
+                    <h2 class="pixelhub-section__title animate-on-scroll" style="text-align: center;">Os Arquitetos por Trás do Código</h2>
+                    <div class="team-grid animate-on-scroll" data-stagger-container>
+                        <!-- Membro 1 -->
+                        <div class="team-member-card" data-stagger-child>
+                            <div class="team-member-card__inner">
+                                <div class="team-member-card__front">
+                                    <img src="assets/img/avatar.jpg" alt="Foto de João Silva">
+                                    <div class="team-member-card__info">
+                                        <h3>João Silva</h3>
+                                        <p>CEO & Fundador</p>
+                                    </div>
+                                </div>
+                                <div class="team-member-card__back">
+                                    <h4>João Silva</h4>
+                                    <p>Visionário e líder, guia a PixelHub na vanguarda da inovação tecnológica.</p>
+                                    <div class="team-socials"><a href="#"><i class="fab fa-linkedin-in"></i></a> <a href="#"><i class="fab fa-twitter"></i></a></div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Membro 2 -->
+                        <div class="team-member-card" data-stagger-child>
+                             <div class="team-member-card__inner">
+                                <div class="team-member-card__front">
+                                    <img src="assets/img/avatar.jpg" alt="Foto de Jeovany Gabriel">
+                                    <div class="team-member-card__info">
+                                        <h3>Jeovany Gabriel</h3>
+                                        <p>Diretor de Arte & UI/UX</p>
+                                    </div>
+                                </div>
+                                <div class="team-member-card__back">
+                                    <h4>Jeovany Gabriel</h4>
+                                    <p>A mente criativa que transforma complexidade em interfaces intuitivas e belas.</p>
+                                    <div class="team-socials"><a href="#"><i class="fab fa-dribbble"></i></a> <a href="#"><i class="fab fa-behance"></i></a></div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Membro 3 -->
+                        <div class="team-member-card" data-stagger-child>
+                            <div class="team-member-card__inner">
+                                <div class="team-member-card__front">
+                                    <img src="assets/img/avatar.jpg" alt="Foto de Roly Ezequiel">
+                                    <div class="team-member-card__info">
+                                        <h3>Roly Ezequiel</h3>
+                                        <p>Líder de Engenharia</p>
+                                    </div>
+                                </div>
+                                <div class="team-member-card__back">
+                                    <h4>Roly Ezequiel</h4>
+                                    <p>O mestre do código. Garante que todas as soluções sejam robustas, escaláveis e seguras.</p>
+                                    <div class="team-socials"><a href="#"><i class="fab fa-github"></i></a> <a href="#"><i class="fab fa-linkedin-in"></i></a></div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Membro 4 -->
+                        <div class="team-member-card" data-stagger-child>
+                           <div class="team-member-card__inner">
+                                <div class="team-member-card__front">
+                                    <img src="assets/img/avatar.jpg" alt="Foto de Augusto Neves">
+                                    <div class="team-member-card__info">
+                                        <h3>Augusto Neves</h3>
+                                        <p>Estrategista de Produto</p>
+                                    </div>
+                                </div>
+                                <div class="team-member-card__back">
+                                    <h4>Augusto Neves</h4>
+                                    <p>Conecta as necessidades do mercado com a tecnologia para criar produtos de sucesso.</p>
+                                    <div class="team-socials"><a href="#"><i class="fab fa-linkedin-in"></i></a></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ======================= LOCALIZAÇÃO E MAPA ======================= -->
+            <section class="pixelhub-section" id="localizacao">
+                <div class="pixelhub-container">
+                    <h2 class="pixelhub-section__title animate-on-scroll" style="text-align: center;">Onde as Ideias Nascem</h2>
+                    <div class="location-layout animate-on-scroll">
+                        <div class="location-details">
+                            <h3>Nosso Escritório</h3>
+                            <p>Venha tomar um café conosco e discutir seu próximo grande projeto. Estamos ansiosos para recebê-lo em nosso hub de inovação.</p>
+                            <div class="address">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <span>
+                                    <strong>Angola, Luanda, Talatona</strong><br>
+                                    Condomínio Palanca Negra, Casa Nº 4<br>
+                                    Rua de Referência
+                                </span>
+                            </div>
+                            <a href="https://www.google.com/maps/search/?api=1&query=-8.894340,13.209670" target="_blank" class="pixelhub-btn pixelhub-btn--primary">Ver no Google Maps</a>
+                        </div>
+                        <div class="location-map">
+                            <iframe 
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3941.838536109315!2d13.20709501478546!3d-8.89433999362725!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zOMKwNTMnMzkuNiJTIDEzwrAxMicMzQuOCJF!5e0!3m2!1spt-BR!2sbr!4v1620000000000!5m2!1spt-BR!2sbr" 
+                                width="100%" height="100%" style="border:0;" 
+                                allowfullscreen="" loading="lazy" 
+                                referrerpolicy="no-referrer-when-downgrade">
+                            </iframe>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+        
+        <!-- ======================= RODAPÉ (Reutilizado) ======================= -->
+        <footer class="pixelhub-footer">
+            <div class="pixelhub-container">
+                <div class="pixelhub-footer-grid">
+                    <div class="pixelhub-footer-col">
+                        <a href="index.html" class="pixelhub-footer__logo">PIXELHUB</a>
+                        <p class="pixelhub-footer__tagline">Transformando ideias em aplicativos de sucesso. Inovação digital para o seu negócio prosperar.</p>
+                    </div>
+                    <div class="pixelhub-footer-col">
+                        <h4>Navegação</h4>
+                        <ul>
+                            <li><a href="sobre.html">Sobre Nós</a></li>
+                            <li><a href="servicos-detalhe.html">Serviços</a></li>
+                            <li><a href="projetos.html">Projetos</a></li>
+                            <li><a href="blog.html">Blog</a></li>
+                        </ul>
+                    </div>
+                    <div class="pixelhub-footer-col">
+                        <h4>Contato</h4>
+                        <ul>
+                            <li><a href="mailto:contato@pixelhub.com"><i class="fas fa-envelope"></i> contato@pixelhub.com</a></li>
+                            <li><a href="tel:+5511999998888"><i class="fas fa-phone"></i> +55 (11) 99999-8888</a></li>
+                        </ul>
+                    </div>
+                    <div class="pixelhub-footer-col">
+                        <h4>Siga-nos</h4>
+                        <div class="pixelhub-footer-socials">
+                    <a href="https://wa.me/5511999998888" target="_blank" aria-label="WhatsApp" class="social-icon whatsapp"><i class="fab fa-whatsapp"></i></a>
+                    <a href="#" target="_blank" aria-label="LinkedIn" class="social-icon linkedin"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#" target="_blank" aria-label="Instagram" class="social-icon instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" target="_blank" aria-label="Facebook" class="social-icon facebook"><i class="fab fa-facebook-f"></i></a>
+                       </div>
+                    </div>
+                </div>
+                <div class="pixelhub-footer-bottom">
+                    <p>© <span id="current-year"></span> PixelHub. Todos os direitos reservados.</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <!-- ======================= BOTÕES FLUTUANTES (Reutilizado) ======================= -->
+    <div class="floating-action-buttons" id="fab-container">
+        <button id="theme-switcher" class="fab-button" aria-label="Alternar Tema">
+            <i class="fas fa-moon"></i>
+            <i class="fas fa-sun"></i>
+        </button>
+        <button id="scroll-to-top" class="fab-button" aria-label="Voltar ao Topo">
+            <i class="fas fa-arrow-up"></i>
+        </button>
+    </div>
+
+    <!-- ======================= SCRIPTS ======================= -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="js/script.js"></script> 
+    <!-- <script src="js/sobre.js"></script>  Não é mais necessário um JS específico para esta página -->
+</body>
+</html>
