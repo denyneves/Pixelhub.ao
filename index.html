@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PixelHub - Criamos Aplicativos que Impulsionam Negócios</title>
+
+    <!-- Google Fonts (Poppins e Montserrat) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    <!-- Bootstrap 5 (CSS para Carrosséis) -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+    <!-- Nosso CSS VIVO e ANIMADO -->
+    <link rel="stylesheet" href="css/estilos.css">
+    <link rel="stylesheet" href="css/blog.css">
+    
+    <link rel="icon" href="assets/img/choice-ia.jpg" type="image/jpg">
+</head>
+<body>
+    <!-- Efeito de Transição de Página -->
+    <div id="page-transition-effect" class="page-transition"></div>
+
+    <div class="pixelhub-site-wrapper">
+        
+        <!-- ======================= CABEÇALHO ======================= -->
+        <header class="pixelhub-header">
+            <div class="pixelhub-container">
+                <a href="index.html" class="pixelhub-header__logo">PIXELHUB</a>
+                
+                <nav class="pixelhub-header__nav" id="main-nav">
+                    <ul>
+                        <li><a href="index.html">Início</a></li>
+                        <li><a href="servicos-detalhe.html">Serviços</a></li>
+                        <li><a href="projetos.html">Projetos</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="sobre.html">Sobre</a></li>
+                    </ul>
+                </nav>
+
+                <div class="pixelhub-header__actions">
+                    <a href="#contato" class="pixelhub-btn pixelhub-btn--quote">Pedir Orçamento</a>
+                    <button class="pixelhub-header__menu-toggle" id="menu-toggle" aria-label="Abrir menu" aria-expanded="false">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                </div>
+            </div>
+        </header>
+
+        <main>
+           <!-- ======================= SEÇÃO HERO (COM SLIDE DE FUNDO) ======================= -->
+            <section class="pixelhub-hero">
+                <div class="hero-background-slider">
+                    <div class="hero-background-slider__slide active" style="background-image: url('assets/img/hero-bg-1.jpg');"></div>
+                    <div class="hero-background-slider__slide" style="background-image: url('assets/img/hero-bg-1.jpg');"></div>
+                    <div class="hero-background-slider__slide" style="background-image: url('assets/img/hero-bg-1.jpg');"></div>
+                </div>
+                <div class="hero-overlay"></div>
+
+                <div class="pixelhub-container pixelhub-hero__container">
+                    <h1 class="pixelhub-hero__title animate-on-load">O FUTURO É DIGITAL, NÓS CRIAMOS ELE</h1>
+                    <p class="pixelhub-hero__subtitle animate-on-load" style="--delay: 0.2s;">Somos especialistas em criar resultados para o seu negócio.</p>
+                    <div class="pixelhub-hero__actions animate-on-load" style="--delay: 0.4s;">
+                        <a href="#contato" class="pixelhub-btn pixelhub-btn--primary">Comece Seu Projeto</a>
+                        <a href="#servicos" class="pixelhub-btn pixelhub-btn--secondary">Nossos Serviços</a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ======================= SEÇÃO QUEM SOMOS ======================= -->
+            <section class="pixelhub-section" id="sobre">
+                <div class="pixelhub-container">
+                    <h2 class="pixelhub-section__title animate-on-scroll">Sua Visão, Nossa Expertise</h2>
+                    <div class="pixelhub-card-grid animate-on-scroll" data-stagger-container>
+                        <div class="pixelhub-card" data-stagger-child>
+                            <i class="fas fa-flag pixelhub-card__icon"></i>
+                            <h3 class="pixelhub-card__title">Missão</h3>
+                            <p class="pixelhub-card__text">Empoderar empreendedores e empresas com aplicativos robustos e intuitivos que impulsionam o crescimento e a inovação.</p>
+                            <a href="sobre.html" class="pixelhub-card__more-info-btn">Saiba mais <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                        <div class="pixelhub-card" data-stagger-child>
+                            <i class="fas fa-eye pixelhub-card__icon"></i>
+                            <h3 class="pixelhub-card__title">Visão</h3>
+                            <p class="pixelhub-card__text">Ser o parceiro tecnológico de referência na criação de produtos digitais que definem o futuro das interações móveis e web.</p>
+                            <a href="sobre.html" class="pixelhub-card__more-info-btn">Saiba mais <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                        <div class="pixelhub-card" data-stagger-child>
+                            <i class="fas fa-users-rays pixelhub-card__icon"></i>
+                            <h3 class="pixelhub-card__title">Valores</h3>
+                            <p class="pixelhub-card__text">Paixão por tecnologia, design centrado no usuário, e um compromisso absoluto com a qualidade e o sucesso do cliente.</p>
+                            <a href="sobre.html" class="pixelhub-card__more-info-btn">Saiba mais <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ======================= SEÇÃO NOSSOS SERVIÇOS ======================= -->
+            <section class="pixelhub-section" id="servicos">
+                <div class="pixelhub-container">
+                    <h2 class="pixelhub-section__title animate-on-scroll">Nosso Processo de Criação de Apps</h2>
+                    <div class="pixelhub-card-grid animate-on-scroll" data-stagger-container>
+                        <div class="pixelhub-card" data-stagger-child>
+                            <i class="fas fa-lightbulb pixelhub-card__icon"></i>
+                            <h3 class="pixelhub-card__title">1. Estratégia e Validação</h3>
+                            <p class="pixelhub-card__text">Mapeamos sua ideia, definimos o público-alvo e validamos o modelo de negócio para garantir um produto com potencial de mercado.</p>
+                             <a href="servicos-detalhe.html" class="pixelhub-card__more-info-btn">Ver detalhes <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                        <div class="pixelhub-card" data-stagger-child>
+                            <i class="fas fa-drafting-compass pixelhub-card__icon"></i>
+                            <h3 class="pixelhub-card__title">2. Design UI/UX intuitivos</h3>
+                            <p class="pixelhub-card__text">Criamos interfaces intuitivas e visualmente atraentes, focadas em proporcionar a melhor experiência para o usuário final.</p>
+                             <a href="servicos-detalhe.html" class="pixelhub-card__more-info-btn">Ver detalhes <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                        <div class="pixelhub-card" data-stagger-child>
+                            <i class="fas fa-code pixelhub-card__icon"></i>
+                            <h3 class="pixelhub-card__title">3. Laboratorio e Testes</h3>
+                            <p class="pixelhub-card__text">Codificamos seu aplicativo com as tecnologias mais modernas e realizamos testes rigorosos para garantir performance e segurança.</p>
+                             <a href="servicos-detalhe.html" class="pixelhub-card__more-info-btn">Ver detalhes <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- ======================= SEÇÃO NOSSOS CLIENTES (CARROSSEL) ======================= -->
+            <section class="pixelhub-section pixelhub-section--primary-bg animate-on-scroll" id="clientes">
+                <div class="pixelhub-container">
+                    <h2 class="pixelhub-section__title pixelhub-section__title--light">Projetos que Transformaram Negócios</h2>
+                    <div id="clientCarousel" class="carousel slide" data-bs-ride="carousel">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <div class="client-testimonial-slide">
+                                    <img src="assets/img/choice-personalizacao.jpg" alt="Case de cliente Fintech">
+                                    <div class="client-testimonial-content">
+                                        <h4>Startup Fintech Inovadora</h4>
+                                        <p>"A PixelHub transformou nossa visão em um aplicativo robusto e intuitivo. O processo foi colaborativo e os resultados superaram nossas expectativas. Nossa base de usuários cresceu 300% em 6 meses."</p>
+                                        <a href="projetos.html" class="pixelhub-btn pixelhub-btn--primary">Ver Case Completo</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="client-testimonial-slide">
+                                    <img src="assets/img/choice-personalizacao.jpg" alt="Case de cliente Healthtech">
+                                    <div class="client-testimonial-content">
+                                        <h4>Plataforma de Saúde e Bem-estar</h4>
+                                        <p>"O aplicativo desenvolvido pela PixelHub conectou pacientes e médicos de forma revolucionária. A usabilidade e a segurança dos dados foram os pontos altos do projeto. Altamente recomendados!"</p>
+                                        <a href="projetos.html" class="pixelhub-btn pixelhub-btn--primary">Ver Case Completo</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="client-testimonial-slide">
+                                    <img src="assets/img/choice-personalizacao.jpg" alt="Case de cliente Delivery">
+                                    <div class="client-testimonial-content">
+                                        <h4>App de Delivery Local</h4>
+                                        <p>"Com o novo app, otimizamos toda a nossa operação logística e triplicamos o número de pedidos. A equipe da PixelHub foi essencial para nosso crescimento exponencial no mercado local."</p>
+                                        <a href="projetos.html" class="pixelhub-btn pixelhub-btn--primary">Ver Case Completo</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#clientCarousel" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Anterior</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#clientCarousel" data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Próximo</span>
+                        </button>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- ======================= SEÇÃO POR QUE ESCOLHER (CONTEÚDO ALTERADO) ======================= -->
+            <section class="pixelhub-section" id="porque-escolher">
+                <div class="pixelhub-container">
+                    <h2 class="pixelhub-section__title animate-on-scroll" style="text-align: center;">Por Que Escolher a PIXELHUB</h2>
+                    <div class="choice-grid-2x2 animate-on-scroll" data-stagger-container>
+                        <div class="choice-card" data-stagger-child>
+                            <div class="choice-card__icon-wrapper">
+                                <i class="fas fa-cogs choice-card__icon"></i>
+                            </div>
+                            <h3 class="choice-card__title">Tecnologia de Ponta</h3>
+                            <p class="choice-card__text">Usamos as stacks de desenvolvimento mais modernas e escaláveis para garantir que seu aplicativo seja rápido, seguro e pronto para o futuro.</p>
+                        </div>
+                        <div class="choice-card" data-stagger-child>
+                            <div class="choice-card__icon-wrapper">
+                                <i class="fas fa-bullseye choice-card__icon"></i>
+                            </div>
+                            <h3 class="choice-card__title">Foco Total no Seu Sucesso</h3>
+                            <p class="choice-card__text">Não somos apenas desenvolvedores, somos seus parceiros. Nosso sucesso está diretamente ligado ao sucesso do seu aplicativo no mercado.</p>
+                        </div>
+                        <div class="choice-card" data-stagger-child>
+                            <div class="choice-card__icon-wrapper">
+                                <i class="fas fa-users choice-card__icon"></i>
+                            </div>
+                            <h3 class="choice-card__title">Equipe Especializada</h3>
+                            <p class="choice-card__text">Nossa equipe multidisciplinar de designers, desenvolvedores e estrategistas trabalha em sinergia para entregar um produto de excelência.</p>
+                        </div>
+                        <div class="choice-card" data-stagger-child>
+                            <div class="choice-card__icon-wrapper">
+                                <i class="fas fa-project-diagram choice-card__icon"></i>
+                            </div>
+                            <h3 class="choice-card__title">Processo Transparente</h3>
+                            <p class="choice-card__text">Com metodologia ágil, você acompanha cada etapa do desenvolvimento, participa das decisões e vê seu projeto evoluir semana a semana.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ======================= SEÇÃO NOSSOS CLIENTES (CARROSSEL) ======================= -->
+            <section class="pixelhub-section pixelhub-section--primary-bg" id="social-connect">
+                <div class="pixelhub-container text-center animate-on-scroll">
+                    <h2 class="pixelhub-section__title pixelhub-section__title--light">Nossos Projectos em Destaques</h2>
+                        <div id="pixelhubCarousel" class="carousel slide" data-bs-ride="carousel">
+                            <div class="carousel-indicators">
+                                <button type="button" data-bs-target="#pixelhubCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                                <button type="button" data-bs-target="#pixelhubCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                                <button type="button" data-bs-target="#pixelhubCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                            </div>
+                            <div class="carousel-inner">
+                                <div class="carousel-item active"><img src="assets/img/slide (1).jpg" class="d-block w-100" alt="Exemplo de projeto web"></div>
+                                <div class="carousel-item"><img src="assets/img/hero-bg-1.jpg" class="d-block w-100" alt="Exemplo de campanha de marketing"></div>
+                                <div class="carousel-item"><img src="assets/img/hero-bg-1.jpg" class="d-block w-100" alt="Exemplo de branding"></div>
+                            </div>
+                            <button class="carousel-control-prev" type="button" data-bs-target="#pixelhubCarousel" data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Anterior</span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#pixelhubCarousel" data-bs-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Próximo</span>
+                            </button>
+                        </div>
+                    </div>
+                </section>
+            </main>
+        
+        <!-- ======================= RODAPÉ (Reutilizado) ======================= -->
+        <footer class="pixelhub-footer">
+            <div class="pixelhub-container">
+                <div class="pixelhub-footer-grid">
+                    <div class="pixelhub-footer-col">
+                        <a href="index.html" class="pixelhub-footer__logo">PIXELHUB</a>
+                        <p class="pixelhub-footer__tagline">Transformando ideias em aplicativos de sucesso. Inovação digital para o seu negócio prosperar.</p>
+                    </div>
+                    <div class="pixelhub-footer-col">
+                        <h4>Navegação</h4>
+                        <ul>
+                            <li><a href="sobre.html">Sobre Nós</a></li>
+                            <li><a href="servicos-detalhe.html">Serviços</a></li>
+                            <li><a href="projetos.html">Projetos</a></li>
+                            <li><a href="blog.html">Blog</a></li>
+                        </ul>
+                    </div>
+                    <div class="pixelhub-footer-col">
+                        <h4>Contato</h4>
+                        <ul>
+                            <li><a href="mailto:contato@pixelhub.com"><i class="fas fa-envelope"></i> contato@pixelhub.com</a></li>
+                            <li><a href="tel:+5511999998888"><i class="fas fa-phone"></i> +55 (11) 99999-8888</a></li>
+                        </ul>
+                    </div>
+                    <div class="pixelhub-footer-col">
+                        <h4>Siga-nos</h4>
+                        <div class="pixelhub-footer-socials">
+                    <a href="https://wa.me/5511999998888" target="_blank" aria-label="WhatsApp" class="social-icon whatsapp"><i class="fab fa-whatsapp"></i></a>
+                    <a href="#" target="_blank" aria-label="LinkedIn" class="social-icon linkedin"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#" target="_blank" aria-label="Instagram" class="social-icon instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" target="_blank" aria-label="Facebook" class="social-icon facebook"><i class="fab fa-facebook-f"></i></a>
+                       </div>
+                    </div>
+                </div>
+                <div class="pixelhub-footer-bottom">
+                    <p>© <span id="current-year"></span> PixelHub. Todos os direitos reservados.</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <!-- ======================= BOTÕES FLUTUANTES (Reutilizado) ======================= -->
+    <div class="floating-action-buttons" id="fab-container">
+        <button id="theme-switcher" class="fab-button" aria-label="Alternar Tema">
+            <i class="fas fa-moon"></i>
+            <i class="fas fa-sun"></i>
+        </button>
+        <button id="scroll-to-top" class="fab-button" aria-label="Voltar ao Topo">
+            <i class="fas fa-arrow-up"></i>
+        </button>
+    </div>
+    <!-- ======================= SCRIPTS ======================= -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
